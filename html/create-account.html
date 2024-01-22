@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - Flipkart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+    }
+
+    .singup-section {
+      margin-top: 20px;
+    }
+
+    .signup-container {
+      padding: 20px;
+      box-shadow: 0 0 14px 0 lightgray;
+      max-width: 400px;
+      width: 50%;
+      margin: auto;
+    }
+
+    .signup-container>h2 {
+      text-align: center;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid rgb(228, 19, 19);
+    }
+
+    .signup-form .form-element {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .signup-form .form-element label {
+      margin-bottom: 5px;
+    }
+
+    .signup-form .form-element input,
+    .signup-form .form-element textarea {
+      padding: 10px 13px;
+      border-radius: 7px;
+      border: 1px solid gray;
+    }
+
+    .signup-form .form-element textarea {
+      background-image: url("../images/banner.avif");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .signup-form .form-element textarea::placeholder {
+      color: #00000035;
+    }
+
+    .signup-form .form-element input {
+      padding-left: 40px;
+    }
+
+    .signup-form .form-element.button-group {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .signup-form .form-element.button-group>* {
+      text-decoration: none;
+      width: calc(50% - 3px);
+      border-radius: 7px;
+      padding: 10px 13px;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .signup-form .form-element.button-group .signup {
+      background-color: rgb(228, 19, 19);
+      border: none;
+      color: #ffffff;
+    }
+
+    .signup-form .form-element.button-group .login {
+      background-color: rgb(104, 34, 234);
+      border: none;
+      color: #ffffff;
+    }
+
+    .signup-form .form-element.button-group .signup:hover {
+      background-color: rgba(228, 19, 19, 0.661);
+    }
+
+    .signup-form .form-element.button-group .login:hover {
+      background-color: rgba(104, 34, 234, 0.713);
+    }
+
+    .signup-form .form-element .input-icon {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+    }
+
+    .signup-form .form-element #mobileNumber {
+      background-image: url("../images/phoneNumber.svg");
+      background-repeat: no-repeat;
+      background-position: 10px 50%;
+    }
+
+    @media screen and (max-width: 767px) {
+      .signup-container {
+        width: 90%;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      .singup-section {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        height: 100vh;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      .signup-container {
+        box-shadow: 0 0 14px 0 rgb(10, 196, 202);
+        max-width: 600px;
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="singup-section">
+    <section class="signup-container">
+      <h2>Signup - Flipkart</h2>
+
+      <form class="signup-form">
+        <div class="form-element">
+          <label for="fullName">Full Name</label>
+          <input type="text" placeholder="Enter Your Full Name" name="fullName" id="fullName" required>
+          <img class="input-icon" src="../images/usericon.svg" alt="User">
+        </div>
+        <div class="form-element">
+          <label for="email">Email</label>
+          <input type="email" placeholder="Enter Your Email" name="email" id="email" required>
+          <img class="input-icon" src="../images/email.svg" alt="email">
+        </div>
+        <div class="form-element">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Enter Your Password" name="password" id="password" required>
+          <img class="input-icon" src="../images/password.svg" alt="email">
+        </div>
+        <div class="form-element">
+          <label for="mobileNumber">Mobile Number</label>
+          <input type="text" placeholder="Enter Your Mobile Number" name="mobileNumber" id="mobileNumber" required>
+        </div>
+        <div class="form-element">
+          <label for="bio">Bio</label>
+          <textarea name="bio" id="bio" cols="30" rows="4" placeholder="Enter Your Bio"></textarea>
+        </div>
+        <div class="form-element button-group">
+          <button class="signup">Signup</button>
+          <a href="./login.html" class="login">Login</a>
+        </div>
+      </form>
+    </section>
+  </div>
+</body>
+
+</html>

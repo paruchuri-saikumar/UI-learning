@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page - Layout 4</title>
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      height: 100px;
+      background-color: rgb(47, 52, 52);
+    }
+
+    .main {
+      flex-grow: 1;
+      display: flex;
+      width: 100%;
+    }
+
+    nav {
+      max-width: 100px;
+      min-width: 100px;
+      background-color: blueviolet;
+    }
+
+    .main-content {
+      background-color: cadetblue;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <header></header>
+    <section class="main">
+      <nav>hello</nav>
+      <section class="main-content">sec</section>
+    </section>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipkart Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+    }
+
+    .login-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      max-width: 400px;
+      width: 50%;
+      box-shadow: 0 0 14px 0 lightgray;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .login-container .form-element {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .login-container .form-element label {
+      margin-bottom: 5px;
+    }
+
+    .login-container .form-element input {
+      padding: 10px 13px;
+      border-radius: 7px;
+      border: 1px solid gray;
+    }
+
+    .login-container .form-element.button-group>* {
+      padding: 10px 13px;
+      width: calc(50% - 3px);
+      border-radius: 7px;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .login-container .form-element.button-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .login-container .form-element .login {
+      background-color: rgb(11, 11, 149);
+    }
+
+    .login-container .form-element .signup {
+      background-color: rgb(6, 78, 10);
+    }
+
+    .login-container .form-element .login:hover {
+      background-color: rgba(12, 12, 172, 0.739);
+    }
+
+    .login-container .form-element .signup:hover {
+      background-color: rgba(6, 78, 10, 0.784);
+    }
+
+    .login-container .forget-password {
+      display: flex;
+      justify-content: center;
+    }
+
+    .login-container .forget-password a {
+      text-decoration: none;
+    }
+
+    .login-container .forget-password a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-section">
+    <section class="login-container">
+      <h2>Login - Flipkart</h2>
+
+      <form class="login-form">
+        <div class="form-element">
+          <label for="username">Email address / Phone number</label>
+          <input type="text" placeholder="Email address or mobile number" id="username" name="username" required>
+        </div>
+
+        <div class="form-element">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" id="password" name="password" required>
+        </div>
+
+        <div class="form-element button-group">
+          <button class="login">Login</button>
+          <a href="./create-account.html" class="signup">Signup</a>
+        </div>
+        <div class="forget-password">
+          <a href="#">Forgetten Password ?</a>
+        </div>
+      </form>
+    </section>
+  </div>
+</body>
+
+</html>

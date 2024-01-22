@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="shortcut icon" href="../images/flipkart_favicon.png" type="image/x-icon">
+  <title>Flipkart - Grocery Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header>div {
+      /* max-width: 1100px; */
+      width: 100%;
+      margin: auto;
+      display: flex;
+      padding: 10px 20px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-item a {
+      color: black;
+      padding: 0px 20px;
+      display: inline-block;
+      background-color: lightblue;
+      margin: 1px 0;
+      border-radius: 7px;
+      text-decoration: none;
+    }
+
+    .header-item.logo img {
+      max-width: 120px;
+    }
+
+    .header-item a:hover {
+      background-color: rgb(151, 189, 202);
+    }
+
+    .header-item.search input {
+      min-width: 250px;
+      padding: 0px 10px;
+      border-radius: 7px;
+      border: none;
+      background-color: rgb(226, 223, 223);
+    }
+
+    .header-item a,
+    .header-item.search input {
+      height: 35px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-item.search input:focus {
+      outline: 2px solid rgb(11, 11, 149);
+    }
+
+    .dropdown-content {
+      box-shadow: 0 0 18px 0px lightgray;
+      width: 250px;
+      border-radius: 7px;
+      background-color: #fff;
+    }
+
+    .dropdown-content .dropdown-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid lightgray;
+    }
+
+    .dropdown-content .dropdown-header a {
+      font-weight: 700;
+    }
+
+    .dropdown-content .dropdown-body ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .dropdown-content .dropdown-body ul a {
+      text-decoration: none;
+      color: #000;
+      padding: 10px;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 1px;
+      background-color: #fff;
+      border-radius: 0;
+    }
+
+    .dropdown-content .dropdown-body ul a:hover {
+      background-color: lightgray;
+    }
+
+    .header-item.login {
+      position: relative;
+    }
+
+    .header-item.login a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-item.login a .cheron-down,
+    .header-item.login a .cheron-up {
+      margin-left: 10px;
+    }
+
+    .header-item.login .dropdown-content {
+      display: none;
+    }
+
+    .header-item.login:hover .dropdown-content {
+      display: block;
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      transform: translate(-50%, 2px);
+    }
+
+    .header-item.login:hover .cheron-down {
+      transform: rotate(180deg);
+    }
+
+    .main-section {
+      border: 1px solid;
+      height: 10000px;
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .goto-top {
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+    }
+
+    .goto-top a {
+      width: 35px;
+      height: 35px;
+      background-color: rgb(134, 129, 129);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    header {
+      box-shadow: 0 0 16px 5px lightgray;
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+
+      .cart,
+      .seller {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      .search {
+        display: none;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="filpkart-container" id="filpkart-top">
+    <!-- <div style="height: 30px;"></div> -->
+    <header>
+      <div>
+        <div class="header-item logo">
+          <img src="../images/flipkartHero.jpg" alt="Hero_image">
+        </div>
+        <div class="header-item search">
+          <input type="text" placeholder="Search for products, brands and more">
+        </div>
+        <div class="header-item login">
+          <a href="login.html">
+            Login
+            <img src="../images/chevrondown.svg" alt="down" class="cheron-down">
+          </a>
+          <div class="dropdown-content">
+            <div class="dropdown">
+              <div class="dropdown-header">
+                <span>New Customer ?</span>
+                <a href="./create-account.html">Signup</a>
+              </div>
+              <div class="dropdown-body">
+                <ul>
+                  <li>
+                    <a href="#">My Profile</a>
+                  </li>
+                  <li>
+                    <a href="#">Orders</a>
+                  </li>
+                  <li>
+                    <a href="#">Wishlist</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-item cart">
+          <a href="cart.html">Cart</a>
+        </div>
+        <div class="header-item seller">
+          <a href="seller.html">Become a Seller</a>
+        </div>
+      </div>
+    </header>
+    <br>
+    <br>
+    <section class="main-section header-item-main">
+      <div>
+        <h2>Dummy content</h2>
+      </div>
+    </section>
+    <footer></footer>
+    <div class="goto-top">
+      <a href="#filpkart-top">
+        <img src="../images/chevronup.svg" alt="goto top">
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>

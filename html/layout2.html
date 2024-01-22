@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page - Layout 2</title>
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .side-nav {
+      width: 200px;
+      background-color: aquamarine;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      left: 200px;
+      width: calc(100% - 200px);
+    }
+
+    header {
+      height: 100px;
+      background-color: rgb(159, 117, 65);
+    }
+
+    footer {
+      height: 50px;
+      background-color: rgb(134, 107, 74);
+    }
+
+    .main-content {
+      height: 2000px;
+      background-color: bisque;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-layout">
+    <nav class="side-nav">
+      Sidenav
+    </nav>
+    <section class="main-container">
+      <header>Header</header>
+      <section class="main-content">
+        Hello
+      </section>
+      <footer>Footer</footer>
+    </section>
+  </div>
+</body>
+
+</html>

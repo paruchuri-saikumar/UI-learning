@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page - Layout</title>
+
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    header {
+      height: 100px;
+      background-color: aquamarine;
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .container {
+      height: 1000px;
+      background-color: cadetblue;
+    }
+
+    .left-nav {
+      width: 200px;
+      background-color: rgb(159, 117, 65);
+      position: fixed;
+      height: calc(100vh - 100px);
+      top: 100px;
+    }
+
+    .main-content {
+      position: relative;
+      top: 100px;
+      left: 200px;
+      width: calc(100% - 200px);
+    }
+
+    footer {
+      height: 50px;
+      background-color: bisque;
+      position: relative;
+      left: 200px;
+      width: calc(100% - 200px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-layout">
+    <header></header>
+    <section class="container">
+      <div class="left-nav"></div>
+      <section class="main-content">
+        Hello
+      </section>
+    </section>
+    <footer>Footer</footer>
+  </div>
+</body>
+
+</html>

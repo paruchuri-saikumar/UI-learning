@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  <title>Sign Up</title>
+
+  <style>
+    .form-group {
+      max-width: 600px;
+      border: 1px solid lightcoral;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .form-group .form-element {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .form-group .form-element label {
+      width: 150px;
+    }
+
+    .button-container {
+      display: flex;
+      align-items: center;
+      justify-content: center !important;
+      width: 100%;
+    }
+
+    .button-container>* {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Sign Up - Job Portal</h2>
+
+  <form method="get">
+    <div class="form-group">
+      <div class="form-element">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" placeholder="Enter Your Full Name" name="fullname" required
+          value="Veerendra Kumar Nagella" disabled>
+      </div>
+      <div class="form-element">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter Your Email" name="email" required readonly
+          value="veerendra.nagella@gmail.com">
+      </div>
+      <div class="form-element">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter Your Password" name="password" required minlength="8"
+          maxlength="10" autofocus>
+      </div>
+      <div class="form-element">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" placeholder="Confim Password" name="confirm-password" required
+          minlength="8" maxlength="10">
+      </div>
+      <div class="form-element">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" placeholder="Phone Number" name="phone" required>
+      </div>
+      <div class="form-element">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Age" required min="18" max="60" step="3">
+      </div>
+      <div class="form-element">
+        <label for="dog">Date of Gradution:</label>
+        <input type="date" id="dog" name="dog" required>
+      </div>
+      <div class="form-element">
+        <label for="dog">Gender:</label>
+        <div>
+          <label for="male">Male:</label>
+          <input type="radio" id="male" name="gender" value="male" required checked>
+        </div>
+        <div>
+          <label for="female">Female:</label>
+          <input type="radio" id="female" name="gender" value="female" required>
+        </div>
+        <div>
+          <label for="trasngender">Trasngender:</label>
+          <input type="radio" id="trasngender" name="gender" value="trasngender" required>
+        </div>
+      </div>
+      <div class="form-element">
+        <label for="dog">Known Languages:</label>
+        <div>
+          <label for="telugu">Telugu:</label>
+          <input type="checkbox" id="telugu" name="lang" value="telugu" checked>
+        </div>
+        <div>
+          <label for="hindi">Hindi:</label>
+          <input type="checkbox" id="hindi" name="lang" value="hindi">
+        </div>
+        <div>
+          <label for="english">English:</label>
+          <input type="checkbox" id="english" name="lang" value="english">
+        </div>
+      </div>
+      <div class="form-element">
+        <label for="status">Marital status:</label>
+        <select name="status" id="status" required>
+          <option value="">Select marrial status</option>
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+          <option value="notInterested">Not Interested</option>
+        </select>
+      </div>
+      <div class="form-element">
+        <label for="color">Color:</label>
+        <input type="color" name="color" id="color" required>
+      </div>
+      <div class="form-element">
+        <label for="resume">Resume:</label>
+        <input type="file" name="resume" id="resume" required>
+      </div>
+      <div class="form-element">
+        <label for="range">Range:</label>
+        <input type="range" name="range" id="range" required value="20">
+      </div>
+      <div class="form-element">
+        <label for="description">Profile Description:</label>
+        <textarea type="file" name="description" id="description" placeholder="Write a profile desciptoion here..."
+          required rows="3" cols="40"></textarea>
+      </div>
+      <br>
+      <div class="form-element button-container">
+        <input type="submit">
+        <input type="reset">
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
