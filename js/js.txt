@@ -1,0 +1,6 @@
+What is JavaScript ?
+  1. JS is client side scripting lang and we can use it in server side as well using nodejs
+  2. JS is used to develop the business logic / functionality of web page
+  3. JS is a loosely coupled, case sensitive
+  4. JS is interpreted not compiler, it is a synchronous it supports asynchronous
+  5. JS follows ECMA standards ( ES )
